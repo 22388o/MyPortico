@@ -68,16 +68,17 @@
 		
 		<label for="currency">Select currency to swap:</label>
 		<select id="currency" name="currency">
-			<option value="L-BTC">Ethereum</option>
-			<option value="BTC-Lightning">Litecoin</option>
-			<option value="L-USDT">Ripple</option>
+			<option value="L-BTC">L-BTC</option>
+			<option value="LN-BTC">LN-BTC</option>
+			<option value="L-USDT">L-BTC</option>
+			<option value="BTC">BTC</option>
 			<!-- Add more options for other cryptocurrencies -->
 		</select><br>
 		
 		<button type="submit">Swap</button>
 	</form>
 	
-	<p>Current BTC-<span id="currency_code">ETH</span> exchange rate: <span id="exchange_rate">0.025</span></p>
+	<p>Current BTC-<span id="currency_code">BTC</span> exchange rate: <span id="exchange_rate">0.025</span></p>
 	<p>Fee: <span id="fee">0.0001 BTC</span></p>
 	<p>Total: <span id="total">0.03 BTC</span></p>
 	
