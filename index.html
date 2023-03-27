@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bitcoin to Boltz Exchange Swap</title>
+</head>
+<body>
+	<h1>Bitcoin to Boltz Exchange Swap</h1>
+	
+	<form action="process_swap.php" method="POST">
+		<label for="btc_amount">Enter Bitcoin amount:</label>
+		<input type="text" id="btc_amount" name="btc_amount"><br>
+		
+		<label for="currency">Select currency to swap:</label>
+		<select id="currency" name="currency">
+			<option value="ETH">Ethereum</option>
+			<option value="LTC">Litecoin</option>
+			<option value="XRP">Ripple</option>
+			<!-- Add more options for other cryptocurrencies -->
+		</select><br>
+		
+		<button type="submit">Swap</button>
+	</form>
+	
+	<p>Current BTC-<span id="currency_code">ETH</span> exchange rate: <span id="exchange_rate">0.025</span></p>
+	<p>Fee: <span id="fee">0.0001 BTC</span></p>
+	<p>Total: <span id="total">0.03 BTC</span></p>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="process_swap.js"></script>
+</body>
+</html>
