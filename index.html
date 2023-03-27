@@ -1,10 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bitcoin to Boltz Exchange Swap</title>
+	<title>Poritoc Exchange</title>
+	<style>
+		body {
+			background-color: #ffffff;
+			color: #000000;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			color: #0077be;
+			font-size: 24px;
+			margin: 20px 0;
+		}
+		form {
+			margin: 20px 0;
+		}
+		label {
+			display: block;
+			margin-bottom: 5px;
+		}
+		input[type="text"],
+		select {
+			background-color: #f7f7f7;
+			border: 1px solid #cccccc;
+			border-radius: 4px;
+			color: #000000;
+			font-size: 16px;
+			padding: 10px;
+			width: 100%;
+		}
+		button[type="submit"] {
+			background-color: #0077be;
+			border: none;
+			border-radius: 4px;
+			color: #ffffff;
+			cursor: pointer;
+			font-size: 16px;
+			padding: 10px 20px;
+		}
+		button[type="submit"]:hover {
+			background-color: #005d91;
+		}
+		p {
+			margin: 20px 0;
+		}
+		#currency_code {
+			font-weight: bold;
+		}
+		#error_message {
+			color: #ff0000;
+			font-size: 16px;
+			margin: 20px 0;
+		}
+	</style>
 </head>
 <body>
-	<h1>Bitcoin to Boltz Exchange Swap</h1>
+	<h1>Portico Exchange</h1>
 	
 	<form action="process_swap.php" method="POST">
 		<label for="btc_amount">Enter Bitcoin amount:</label>
@@ -12,9 +68,9 @@
 		
 		<label for="currency">Select currency to swap:</label>
 		<select id="currency" name="currency">
-			<option value="ETH">Ethereum</option>
-			<option value="LTC">Litecoin</option>
-			<option value="XRP">Ripple</option>
+			<option value="L-BTC">Ethereum</option>
+			<option value="BTC-Lightning">Litecoin</option>
+			<option value="L-USDT">Ripple</option>
 			<!-- Add more options for other cryptocurrencies -->
 		</select><br>
 		
@@ -24,6 +80,8 @@
 	<p>Current BTC-<span id="currency_code">ETH</span> exchange rate: <span id="exchange_rate">0.025</span></p>
 	<p>Fee: <span id="fee">0.0001 BTC</span></p>
 	<p>Total: <span id="total">0.03 BTC</span></p>
+	
+	<div id="error_message"></div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="process_swap.js"></script>
